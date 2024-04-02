@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCode - Grupo de Investigación</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100">
+    <header class="bg-green-500 p-4 flex items-center justify-between">
+        <div class="flex items-center">
+            <img src="./png/logo-color.png" alt="Logo de Green Code" class="h-16 w-16 rounded-full mx-auto mb-4 mr-2">
+            <h1 class="text-3xl text-white font-bold">GreenCode</h1>
+        </div>
+        <nav class="text-right">
+            <ul class="flex justify-end space-x-4">
+                <li class="p-3 rounded-lg border border-black-500 bg-green-700 hover:bg-white hover:text-green-500 transition duration-300 ease-in-out "><a href="#inicio" class="nav-link" onclick="showSection('inicio')">Inicio</a></li>
+                <li class="p-3 rounded-lg border border-black-500 bg-green-700 hover:bg-white hover:text-green-500 transition duration-300 ease-in-out "><a href="#nosotros" class="nav-link" onclick="showSection('nosotros')">Sobre Nosotros</a></li>
+                <li class="p-3 rounded-lg border border-black-500 bg-green-700 hover:bg-white hover:text-green-500 transition duration-300 ease-in-out "><a href="#proyectos" class="nav-link" onclick="showSection('proyectos')">Proyectos</a></li>
+                <li class="p-3 rounded-lg border border-black-500 bg-green-700 hover:bg-white hover:text-green-500 transition duration-300 ease-in-out "><a href="#recursos" class="nav-link" onclick="showSection('recursos')">Recursos</a></li>
+                <li class="p-3 rounded-lg border border-black-500 bg-green-700 hover:bg-white hover:text-green-500 transition duration-300 ease-in-out "><a href="#eventos" class="nav-link" onclick="showSection('eventos')">Eventos</a></li>
+                <li class="p-3 rounded-lg border border-black-500 bg-green-700 hover:bg-white hover:text-green-500 transition duration-300 ease-in-out "><a href="#contacto" class="nav-link" onclick="showSection('contacto')">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-8 flex-grow">
+        <!-- Contenido principal de la página -->
+        <section id="inicio" class="mb-8 section-content mx-auto flex flex-wrap">
+            <div class="w-full md:w-1/2">
+                <img src="inicio.png" alt="Imagen" class="w-full h-auto md:h-3/4 rounded-lg">
+            </div>
+            <div class="w-full md:w-1/2 p-8">
+                <h2 class="text-2xl font-bold mb-4">Bienvenido a GreenCode</h2>
+                <p class="mb-4">Somos un grupo de investigación dedicado a promover la sostenibilidad y la tecnología verde.
+                    Nuestra misión es encontrar soluciones innovadoras para preservar el medio ambiente y crear un futuro más
+                    sostenible para todos.</p>
+            </div>
+        </section>
+
+        <section id="nosotros" class="mb-8 section-content hidden">
+            <h2 class="text-2xl font-bold mb-4">Sobre Nosotros</h2>
+            <p>Somos un equipo de investigadores comprometidos con encontrar soluciones tecnológicas para preservar el medio ambiente.</p>
+            <!-- Contenido de la sección "Sobre Nosotros" -->
+        </section>
+
+        <section id="proyectos" class="mb-8 section-content hidden">
+            <h2 class="text-2xl font-bold mb-4">Proyectos</h2>
+            <p>Descubre nuestros proyectos en curso y cómo están contribuyendo a un futuro más sostenible.</p>
+            <!-- Contenido de la sección de proyectos -->
+        </section>
+
+        <section id="recursos" class="mb-8 section-content hidden">
+            <h2 class="text-2xl font-bold mb-4">Recursos</h2>
+            <p>Explora nuestros recursos para obtener más información sobre tecnología verde y sostenibilidad.</p>
+            <!-- Contenido de la sección de recursos -->
+        </section>
+
+        <section id="eventos" class="mb-8 section-content hidden">
+            <h2 class="text-2xl font-bold mb-4">Eventos</h2>
+            <p>Participa en nuestros eventos y conferencias sobre innovación verde y desarrollo sostenible.</p>
+            <!-- Contenido de la sección de eventos -->
+        </section>
+
+        <section id="contacto" class="mb-8 section-content hidden">
+            <h2 class="text-2xl font-bold mb-4">Contacto</h2>
+            <p>Contáctanos para obtener más información sobre nuestro grupo de investigación y cómo puedes colaborar.</p>
+            <!-- Contenido de la sección de contacto -->
+        </section>
+    </main>
+
+    <footer class="footer bg-gray-900 text-white text-center py-4">
+        &copy; 2024 GreenCode - Grupo de Investigación
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Muestra la sección deseada
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+
