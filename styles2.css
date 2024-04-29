@@ -28,3 +28,21 @@
     bottom: 0;
     width: 100%;
 }
+
+#slider {
+    max-width: 600px; /* Ajusta el ancho máximo del slider en pantallas más grandes según sea necesario */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide {
+    width: 100%;
+    height: 430px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
